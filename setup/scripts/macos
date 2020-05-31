@@ -46,8 +46,12 @@ brew cask install alfred
 brew cask install imageoptim
 brew cask install firefox
 brew cask install microsoft-edge
-brew cask install iterm2
 brew cask install google-chrome google-chrome-canary
+brew cask install iterm2
+
+# Configure iterm
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$HOME/.dotfiles/setup"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 # Install other useful tools
 brew install git
