@@ -1,0 +1,11 @@
+# load zsh plugins
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# configure zsh-autosuggestions
+typeset -g ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244,underline'
+
+# configure zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
