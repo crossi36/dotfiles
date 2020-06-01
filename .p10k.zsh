@@ -31,11 +31,17 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # os_icon               # os identifier
-    context
+    user
+    custom_on
+    host
     dir                     # current directory
     vcs                     # git status
     prompt_char             # prompt symbol
   )
+
+  POWERLEVEL9K_CUSTOM_ON="echo -n on"
+  POWERLEVEL9K_CUSTOM_ON_FOREGROUND="fg=244"  
+  #POWERLEVEL9K_CUSTOM_ON_BACKGROUND="fg=244"
 
   # The list of segments shown on the right. Fill it with less important segments.
   # Right prompt on the last prompt line (where you are typing your commands) gets
