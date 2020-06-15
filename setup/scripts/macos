@@ -17,7 +17,7 @@ export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+brew install gnu-sed
 # Install a modern version of ZSH.
 brew install zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting romkatv/powerlevel10k/powerlevel10k
 
@@ -28,13 +28,13 @@ if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
 fi;
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
+brew install wget
 
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
+brew install vim
 brew install grep
 brew install openssh
 brew install screen
@@ -46,7 +46,7 @@ brew cask install alfred
 brew cask install imageoptim
 brew cask install firefox
 brew cask install microsoft-edge
-brew cask install google-chrome google-chrome-canary
+brew cask install google-chrome
 brew cask install iterm2
 
 # Configure iterm
@@ -57,11 +57,12 @@ defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 brew install git
 brew install git-lfs
 brew install ssh-copy-id
+
+# Install pass
+brew tap amar1729/formulae
 brew install pass browserpass
 
-# Configure browserpass
-cd $(brew --prefix)/lib/browserpass
-make hosts-chrome-user
+PREFIX='/usr/local/opt/browserpass' make hosts-chrome-user -f /usr/local/opt/browserpass/lib/browserpass/Makefile
 
 # Remove outdated versions from the cellar.
 brew cleanup
