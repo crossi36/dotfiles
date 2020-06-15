@@ -9,4 +9,3 @@ source $HOME/.dotfiles/.exports
 source $HOME/.dotfiles/.aliases
 source $HOME/.dotfiles/.functions
 
-source $HOME/.dotfiles/.gitauthor
