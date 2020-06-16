@@ -13,6 +13,8 @@ export MANPAGER='less -X';
 
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
+# needs to be last export to take precedence over brew gpg
+export PATH="/usr/local/MacGPG2/bin:$PATH"
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';
