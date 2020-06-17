@@ -26,3 +26,7 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 # Disable homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
+
+# Set GOPATH to avoid default path ($HOME/go)
+export GOPATH=$HOME/Code/go
+export PATH="$HOME/Code/go/bin:$PATH"
