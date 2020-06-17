@@ -64,5 +64,8 @@ brew install pass browserpass
 
 PREFIX='/usr/local/opt/browserpass' make hosts-chrome-user -f /usr/local/opt/browserpass/lib/browserpass/Makefile
 
+# Configure GPG as SSH agent
+echo "enable-ssh-support" >> $HOME/.gnupg/gpg-agent.conf
+
 # Remove outdated versions from the cellar.
 brew cleanup
