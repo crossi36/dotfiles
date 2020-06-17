@@ -69,5 +69,11 @@ PREFIX='/usr/local/opt/browserpass' make hosts-chrome-user -f /usr/local/opt/bro
 # Configure GPG as SSH agent
 echo "enable-ssh-support" >> $HOME/.gnupg/gpg-agent.conf
 
+# Install wol
+source $HOME/.dotfiles/.exports
+
+brew install go
+go install github.com/crossi36/wol
+
 # Remove outdated versions from the cellar.
 brew cleanup
