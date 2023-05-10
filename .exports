@@ -4,6 +4,8 @@
 
 export EDITOR='nano'
 
+export PATH="$PATH:/opt/homebrew/bin"
+
 export MANPATH="/usr/local/man:$MANPATH"
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
 
